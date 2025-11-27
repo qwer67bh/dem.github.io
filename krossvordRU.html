@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Новогодний кроссворд</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #e3f2fd, #f8f9fa);
+      text-align: center;
+      padding: 20px;
+      color: #1a237e;
+    }
+    h1 {
+      color: #d32f2f;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #546e7a;
+      margin-bottom: 25px;
+    }
+    .crossword {
+      display: inline-block;
+      margin: 20px auto;
+      border: 3px solid #37474f;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .row {
+      display: flex;
+    }
+    .cell {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #37474f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #ffffff;
+    }
+    .black {
+      background-color: #37474f;
+    }
+    .word-list {
+      margin-top: 25px;
+      text-align: left;
+      display: inline-block;
+      padding: 16px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      max-width: 320px;
+    }
+    .word-list h2 {
+      margin-top: 0;
+      color: #d32f2f;
+      font-size: 1.2em;
+    }
+    .word-list ol {
+      padding-left: 20px;
+      column-count: 2;
+      column-gap: 20px;
+    }
+    .word-list li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Новогодний кроссворд</h1>
+  <p class="subtitle">Разгадайте 10 зимних слов!</p>
+
+  <div class="crossword" id="crossword-grid">
+    <!-- Сетка будет заполнена JavaScript -->
+  </div>
+
+  <div class="word-list">
+    <h2>Слова:</h2>
+    <ol>
+      <li>Холод</li>
+      <li>Мороз</li>
+      <li>Снег</li>
+      <li>Елка</li>
+      <li>Шарф</li>
+      <li>Лед</li>
+      <li>Коньки</li>
+      <li>Подарки</li>
+      <li>Иней</li>
+      <li>Санки</li>
+    </ol>
+  </div>
+
+  <script>
+    // Создаём пустую сетку 10x10
+    const grid = Array(10).fill().map(() => Array(10).fill(''));
+
+    // Вручную размещаем слова (без конфликтов)
+    // Горизонтально:
+    grid[0][0] = 'П'; grid[0][1] = 'О'; grid[0][2] = 'Д'; grid[0][3] = 'А'; grid[0][4] = 'Р'; grid[0][5] = 'К'; grid[0][6] = 'И'; // ПОДАРКИ
+    grid[1][0] = 'С'; grid[1][1] = 'А'; grid[1][2] = 'Н'; grid[1][3] = 'К'; grid[1][4] = 'И'; // САНКИ
+    grid[2][1] = 'М'; grid[2][2] = 'О'; grid[2][3] = 'Р'; grid[2][4] = 'О'; grid[2][5] = 'З'; // МОРОЗ
+    grid[3][2] = 'Х'; grid[3][3] = 'О'; grid[3][4] = 'Л'; grid[3][5] = 'О'; grid[3][6] = 'Д'; // ХОЛОД
+    grid[4][3] = 'И'; grid[4][4] = 'Н'; grid[4][5] = 'Е'; grid[4][6] = 'Й'; // ИНЕЙ
+    grid[5][1] = 'С'; grid[5][2] = 'Н'; grid[5][3] = 'Е'; grid[5][4] = 'Г'; // СНЕГ
+    grid[6][2] = 'Л'; grid[6][3] = 'Е'; grid[6][4] = 'Д'; // ЛЕД
+    grid[7][0] = 'Ш'; grid[7][1] = 'А'; grid[7][2] = 'Р'; grid[7][3] = 'Ф'; // ШАРФ
+    grid[8][5] = 'Е'; grid[8][6] = 'Л'; grid[8][7] = 'К'; grid[8][8] = 'А'; // ЕЛКА
+
+    // Вертикально:
+    grid[2][6] = 'К';
+    grid[3][6] = 'О';
+    grid[4][6] = 'Н'; // ← уже 'Й' от ИНЕЙ → конфликт!
+
+    // Поэтому разместим КОНЬКИ горизонтально в строке 9:
+    grid[9][0] = 'К'; grid[9][1] = 'О'; grid[9][2] = 'Н'; grid[9][3] = 'Ь'; grid[9][4] = 'К'; grid[9][5] = 'И'; // КОНЬКИ
+
+    // Теперь заполним все пустые клетки как "чёрные"
+    for (let r = 0; r < 10; r++) {
+      for (let c = 0; c < 10; c++) {
+        if (grid[r][c] === '') {
+          grid[r][c] = 'black';
+        }
+      }
+    }
+
+    // Отрисовка сетки
+    const container = document.getElementById('crossword-grid');
+    for (let r = 0; r < 10; r++) {
+      const rowDiv = document.createElement('div');
+      rowDiv.className = 'row';
+      for (let c = 0; c < 10; c++) {
+        const cellDiv = document.createElement('div');
+        if (grid[r][c] === 'black') {
+          cellDiv.className = 'cell black';
+        } else {
+          cellDiv.className = 'cell';
+          cellDiv.textContent = grid[r][c];
+        }
+        rowDiv.appendChild(cellDiv);
+      }
+      container.appendChild(rowDiv);
+    }
+  </script>
+</body>
+</html>

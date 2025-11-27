@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Year Crossword</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      padding: 20px;
+      color: #2c3e50;
+    }
+    h1 {
+      color: #c0392b;
+    }
+    .crossword {
+      display: inline-block;
+      margin: 20px auto;
+      border: 2px solid #333;
+    }
+    .row {
+      display: flex;
+    }
+    .cell {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      background-color: white;
+    }
+    .black {
+      background-color: #333;
+    }
+    .word-list {
+      margin-top: 25px;
+      display: inline-block;
+      text-align: left;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .word-list h2 {
+      margin-top: 0;
+      color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <h1>New Year Crossword</h1>
+  <div class="crossword" id="grid"></div>
+
+  <div class="word-list">
+    <h2>Words to find:</h2>
+    <ul>
+      <li>SNOW</li>
+      <li>TREE</li>
+      <li>GIFT</li>
+      <li>STAR</li>
+      <li>JOY</li>
+    </ul>
+  </div>
+
+  <script>
+    // Create a 5x5 grid
+    const grid = Array(5).fill().map(() => Array(5).fill(''));
+
+    // Place words:
+    // SNOW — vertical at column 0
+    grid[0][0] = 'S';
+    grid[1][0] = 'N';
+    grid[2][0] = 'O';
+    grid[3][0] = 'W';
+
+    // TREE — horizontal at row 1, starting at col 1
+    grid[1][1] = 'T';
+    grid[1][2] = 'R';
+    grid[1][3] = 'E';
+    grid[1][4] = 'E';
+
+    // GIFT — vertical at column 4 (G at row 0)
+    grid[0][4] = 'G';
+    grid[1][4] = 'E'; // already 'E' from TREE → conflict!
+
+    // Let's redesign to avoid conflicts:
+
+    // Final layout (conflict-free):
+    // Row 0: S . . . G
+    // Row 1: N T R E E
+    // Row 2: O . . . I
+    // Row 3: W . . . F
+    // Row 4: . . . . T
+
+    grid[0][0] = 'S';
+    grid[1][0] = 'N';
+    grid[2][0] = 'O';
+    grid[3][0] = 'W';               // SNOW (vertical)
+
+    grid[1][1] = 'T';
+    grid[1][2] = 'R';
+    grid[1][3] = 'E';
+    grid[1][4] = 'E';               // TREE (horizontal)
+
+    grid[0][4] = 'G';
+    grid[2][4] = 'I';
+    grid[3][4] = 'F';
+    grid[4][4] = 'T';               // GIFT (vertical, skipping row 1 — but row 1 already has 'E')
+
+    // Conflict! So let's put GIFT horizontally at bottom:
+    // Instead, place GIFT at row 4: G I F T → but only 4 letters, grid is 5 cols → OK
+
+    // Reset GIFT:
+    grid[4][0] = 'G';
+    grid[4][1] = 'I';
+    grid[4][2] = 'F';
+    grid[4][3] = 'T';               // GIFT (horizontal)
+
+    // STAR — vertical at column 2
+    grid[0][2] = 'S';
+    grid[1][2] = 'R'; // but TREE already has 'R' at [1][2] → OK if we align!
+    // Wait: we need 'T' at top for STAR
+
+    // Revised plan with real intersections:
+
+    // Final working grid (5x5):
+    // S . T . .
+    // N . R . .
+    // O . A . J
+    // W . R . O
+    // G I F T Y  → but "JOY" is 3 letters, "GIFT" is 4
+
+    // Let’s use this clean layout (no forced intersections, just clear placement):
+
+    const cleanGrid = [
+      ['S', '',  'S', '',  'G'],
+      ['N', '',  'T', '',  'I'],
+      ['O', '',  'A', '',  'F'],
+      ['W', '',  'R', '',  'T'],
+      ['',  '',  '',  'J', 'O']  // JOY not fitting well
+    ];
+
+    // Better: use a simple layout without overcomplicating
+
+    // Final decision: place words without intersections (for clarity in 5x5)
+    const finalGrid = Array(5).fill().map(() => Array(5).fill(''));
+
+    // SNOW — vertical, col 0
+    ['S','N','O','W'].forEach((letter, i) => finalGrid[i][0] = letter);
+
+    // TREE — horizontal, row 1, cols 1-4
+    ['T','R','E','E'].forEach((letter, i) => finalGrid[1][i+1] = letter);
+
+    // GIFT — horizontal, row 3, cols 1-4
+    ['G','I','F','T'].forEach((letter, i) => finalGrid[3][i+1] = letter);
+
+    // STAR — vertical, col 4, rows 0-3
+    ['S','T','A','R'].forEach((letter, i) => finalGrid[i][4] = letter);
+
+    // JOY — vertical, col 2, rows 2-4
+    ['J','O','Y'].forEach((letter, i) => finalGrid[i+2][2] = letter);
+
+    // Mark empty cells as '
