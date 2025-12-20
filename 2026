@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рождественское поздравление</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+      margin: 50px auto;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .poem {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="poem">
+    <p>С небес сошёл Спаситель,</p>
+    <p>В пещере родился свет!</p>
+    <p>Пусть мир в сердцах просветлится,</p>
+    <p>А в доме — любовь и сон!</p>
+  </div>
+</body>
+</html>
