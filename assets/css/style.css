@@ -1,8 +1,10 @@
+/* Вместо */
 body {
-  background-color: #f5f5f5;
-  color: #333;
+  background: pink;
 }
-header, footer {
-  background-color: #4a6fa6;
-  color: white;
+
+/* Лучше */
+body, html, #main_content, .page-content, .post, article {
+  background-color: #fff0f5 !important;
+  color: #d81b60 !important;
 }
