@@ -1,10 +1,4 @@
-/* Вместо */
 body {
-  background: pink;
-}
-
-/* Лучше */
-body, html, #main_content, .page-content, .post, article {
-  background-color: #fff0f5 !important;
-  color: #d81b60 !important;
+  background-color: #e3f2fd !important;
+  color: #0d47a1 !important;
 }
