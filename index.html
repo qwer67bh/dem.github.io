@@ -255,6 +255,61 @@
 
 </body>
 </html>
+    // ⚠️ ЗАМЕНИТЕ НА СВОЙ URL ПОСЛЕ ДЕПЛОЯ BACKEND
+const API_URL = 'https://your-backend.onrender.com/predict';
+
+async function sendQuestion() {
+    const input = document.getElementById('user-input');
+    const loading = document.getElementById('loading');
+    const response = document.getElementById('response');
+    const question = input.value.trim();
+    
+    if (!question) {
+        alert('Введите вопрос!');
+        return;
+    }
+    
+    // Показываем загрузку
+    loading.classList.remove('hidden');
+    response.classList.add('hidden');
+    
+    try {
+        const res = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text: question })
+        });
+        
+        const data = await res.json();
+        
+        if (data.error) {
+            alert('Ошибка: ' + data.error);
+            return;
+        }
+        
+        // Заполняем ответ
+        document.getElementById('user-question').textContent = data.question;
+        document.getElementById('bot-answer').textContent = data.answer;
+        document.getElementById('similarity-score').textContent = data.similarity;
+        
+        // Показываем результат
+        response.classList.remove('hidden');
+        
+    } catch (error) {
+        alert('Ошибка соединения с сервером: ' + error.message);
+    } finally {
+        loading.classList.add('hidden');
+    }
+}
+
+// Отправка по Enter
+document.getElementById('user-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendQuestion();
+    }
+});
     <h2>Создано: 19 января 2026</h2>
     <p># Решение задачи по шифру Цезаря<p/>
 <p>- а. АПЕЛЬСИН → САЦЬНВЩЮ → **ключ = 17**<p/>  
