@@ -10,6 +10,55 @@
     <title>Привет, мир!</title>
 </head>
 <body>
+    <h2>Создано: 21 февраля 2026</h2>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Бот</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 FAQ Бот</h1>
+        <p class="subtitle">Задайте вопрос — бот найдёт ответ</p>
+        
+        <div class="chat-box">
+            <input type="text" id="user-input" placeholder="Введите ваш вопрос..." />
+            <button onclick="sendQuestion()">Отправить</button>
+        </div>
+        
+        <div id="loading" class="hidden">⏳ Загрузка...</div>
+        
+        <div id="response" class="response-box hidden">
+            <div class="response-item">
+                <strong>Ваш вопрос:</strong>
+                <p id="user-question"></p>
+            </div>
+            <div class="response-item">
+                <strong>Ответ бота:</strong>
+                <p id="bot-answer"></p>
+            </div>
+            <div class="similarity">
+                Точность совпадения: <span id="similarity-score"></span>
+            </div>
+        </div>
+        
+        <div class="faq-list">
+            <h3>📋 Примеры вопросов:</h3>
+            <ul>
+                <li>Как быстро доставляется заказ?</li>
+                <li>Где гарантия на товар?</li>
+                <li>Можно ли вернуть товар обратно?</li>
+                <li>Как оплатить заказ?</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
     <h2>Создано: 17 февраля 2026</h2>
     <img src="image.png" alt="картинка 52ххахаха.jpg ">
     <h2>Создано: 21 января 2026</h2>
