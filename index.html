@@ -465,6 +465,9 @@ if __name__ == "__main__":
             break
         except Exception as e:
             print(f"❌ Ошибка: {e}\n")
+        curl -X POST http://localhost:5000/api/answer \
+  -H "Content-Type: application/json" \
+  -d '{"question": "Как оплатить заказ?"}'
     <h2>Создано: 19 января 2026</h2>
     <p># Решение задачи по шифру Цезаря<p/>
 <p>- а. АПЕЛЬСИН → САЦЬНВЩЮ → **ключ = 17**<p/>  
