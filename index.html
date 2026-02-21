@@ -310,6 +310,26 @@ document.getElementById('user-input').addEventListener('keypress', function(e) {
         sendQuestion();
     }
 });
+    from flask import Flask, request, jsonify
+from bot import get_answer  # импортируем функцию из bot.py
+
+app = Flask(__name__)
+
+@app.route('/api/answer', methods=['POST'])
+def api_answer():
+    data = request.json
+    question = data.get('question', '')
+    
+    result = get_answer(question)
+    
+    return jsonify({
+        'answer': result['answer'],
+        'similarity': round(result['similarity'], 3),
+        'success': result['success']
+    })
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
     <h2>Создано: 19 января 2026</h2>
     <p># Решение задачи по шифру Цезаря<p/>
 <p>- а. АПЕЛЬСИН → САЦЬНВЩЮ → **ключ = 17**<p/>  
