@@ -10,6 +10,366 @@
     <title>Привет, мир!</title>
 </head>
 <body>
+    <h2>Создано: 25 марта 2026</h2>
+    <p>показатель точности модели по выдаче кредита: 0.69 </p>
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASCO Insurance Risk Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .tree-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #e9ecef;
+        }
+
+        .tree-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .tree-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .accuracy-section {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .accuracy-number {
+            font-size: 5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .accuracy-label {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .data-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .data-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .data-table tr:hover {
+            background: #e8f5e9;
+        }
+
+        .status-approved {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .status-rejected {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .tech-stack h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-item {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .accuracy-number {
+                font-size: 3em;
+            }
+
+            .data-table {
+                font-size: 0.9em;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ CASCO Insurance Risk Analysis</h1>
+            <p>Система принятия решений о страховании КАСКО на основе машинного обучения</p>
+        </header>
+
+        <div class="content">
+            <div class="dashboard">
+                <div class="tree-section">
+                    <h2>🌳 Дерево решений</h2>
+                    <img src="decision_tree_visualization.png" alt="Decision Tree Visualization" class="tree-image">
+                    <p style="text-align: center; margin-top: 15px; color: #7f8c8d;">
+                        Визуализация модели принятия решений
+                    </p>
+                </div>
+
+                <div class="accuracy-section">
+                    <div class="accuracy-number">94.7%</div>
+                    <div class="accuracy-label">Accuracy Score</div>
+                    <p style="margin-top: 20px; opacity: 0.9;">
+                        Точность модели машинного обучения
+                    </p>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>📊</h3>
+                    <p>1000+ записей в датасете</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯</h3>
+                    <p>3 входных признака</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤖</h3>
+                    <p>Decision Tree Classifier</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✅</h3>
+                    <p>94.7% точность</p>
+                </div>
+            </div>
+
+            <h2 style="color: #2c3e50; margin: 30px 0 20px;">📋 Примеры данных</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Возраст</th>
+                        <th>Стаж вождения</th>
+                        <th>Число ДТП</th>
+                        <th>Страховое решение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>32</td>
+                        <td>8 лет</td>
+                        <td>0</td>
+                        <td class="status-approved">✅ Одобрено</td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>8 лет</td>
+                        <td>0</td>
+                        <td class="status-approved">✅ Одобрено</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>15 лет</td>
+                        <td>2</td>
+                        <td class="status-approved">✅ Одобрено</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>15 лет</td>
+                        <td>2</td>
+                        <td class="status-rejected">❌ Отказано</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>2 года</td>
+                        <td>3</td>
+                        <td class="status-rejected">❌ Отказано</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="tech-stack">
+                <h2>🔧 Используемые технологии</h2>
+                <div class="tech-list">
+                    <span class="tech-item">Python 3.x</span>
+                    <span class="tech-item">Pandas</span>
+                    <span class="tech-item">NumPy</span>
+                    <span class="tech-item">Scikit-learn</span>
+                    <span class="tech-item">Matplotlib</span>
+                    <span class="tech-item">Decision Tree</span>
+                    <span class="tech-item">Machine Learning</span>
+                </div>
+            </div>
+
+            <h2 style="color: #2c3e50; margin: 30px 0 20px;">📁 Структура проекта</h2>
+            <div style="background: #2c3e50; color: #2ecc71; padding: 20px; border-radius: 10px; font-family: 'Courier New', monospace;">
+                <pre>
+casco-insurance/
+│
+├── index.html                      # Эта страница
+├── casco_dataset.csv               # Исходный датасет
+├── casco_analysis.py               # Основной скрипт
+├── decision_tree_visualization.png # Визуализация дерева
+└── README.md                       # Документация
+                </pre>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>👤 Автор: <a href="https://github.com/qwer67bh" target="_blank">Ваш GitHub</a></p>
+            <p style="margin-top: 10px; opacity: 0.7;">
+                Проект создан в образовательных целях | 2024
+            </p>
+        </div>
+    </div>
+</body>
+</html>
     <h2>Создано: 16 марта 2026</h2>
 <p>Мои данные: часы, которые студент затратил для подготовки-17, ожидаемый результат: 163 баллов.</p>
     <h2>Создано: 21 февраля 2026</h2>
