@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="qy3F0m6EgW70mZYaSKFZ">
+    <mxGraphModel dx="2241" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-33" edge="1" parent="1" source="BrL5pyPdSEiaG24vnSHz-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="BrL5pyPdSEiaG24vnSHz-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-7" parent="1" style="shape=ext;margin=3;double=1;whiteSpace=wrap;html=1;align=center;" value="№67" vertex="1">
+          <mxGeometry height="40" width="100" x="-150" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-8" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Петрова Анатолий Викторович" vertex="1">
+          <mxGeometry height="40" width="100" x="-50" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-34" edge="1" parent="1" source="BrL5pyPdSEiaG24vnSHz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="BrL5pyPdSEiaG24vnSHz-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-9" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="07.08.2000" vertex="1">
+          <mxGeometry height="40" width="100" x="-140" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-10" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="удаление коренного зуба" vertex="1">
+          <mxGeometry height="40" width="100" x="-40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-11" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="против воспалительное средство" vertex="1">
+          <mxGeometry height="40" width="190" x="60" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-12" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="сильная боль" vertex="1">
+          <mxGeometry height="40" width="100" x="250" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-14" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="№69" vertex="1">
+          <mxGeometry height="40" width="100" x="-110" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-15" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Смирнов Юрий Владимирович" vertex="1">
+          <mxGeometry height="40" width="110" x="-10" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-16" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="г.Москва" vertex="1">
+          <mxGeometry height="40" width="100" x="100" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-17" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="№80" vertex="1">
+          <mxGeometry height="40" width="100" x="390" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Пациент" vertex="1">
+          <mxGeometry height="30" width="60" x="-130" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="операция" vertex="1">
+          <mxGeometry height="30" width="60" x="-120" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="хирург" vertex="1">
+          <mxGeometry height="30" width="60" x="-130" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-22" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Иванов Иван Иванч " vertex="1">
+          <mxGeometry height="40" width="100" x="490" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-23" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="г.Казань" vertex="1">
+          <mxGeometry height="40" width="100" x="590" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="пациент" vertex="1">
+          <mxGeometry height="30" width="60" x="400" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-25" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="09.06.2003" vertex="1">
+          <mxGeometry height="40" width="100" x="270" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-26" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="&lt;span class=&quot;qwen-markdown-text&quot; data-spm-anchor-id=&quot;a2ty_o01.29997172.0.i2.737b5171z81fCY&quot;&gt;Пластика носа&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="100" x="370" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-27" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Ибупрофен" vertex="1">
+          <mxGeometry height="40" width="100" x="470" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-28" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Тошнота" vertex="1">
+          <mxGeometry height="40" width="100" x="570" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="операция" vertex="1">
+          <mxGeometry height="30" width="60" x="280" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-30" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="№56" vertex="1">
+          <mxGeometry height="40" width="100" x="190" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-31" parent="1" style="whiteSpace=wrap;html=1;align=center;" value="Петрова Анна Сергеевна" vertex="1">
+          <mxGeometry height="40" width="100" x="290" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="хирург" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-35" edge="1" parent="1" source="BrL5pyPdSEiaG24vnSHz-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.16;entryY=-0.025;entryDx=0;entryDy=0;entryPerimeter=0;" target="BrL5pyPdSEiaG24vnSHz-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BrL5pyPdSEiaG24vnSHz-36" edge="1" parent="1" source="BrL5pyPdSEiaG24vnSHz-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.92;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" target="BrL5pyPdSEiaG24vnSHz-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
